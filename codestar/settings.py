@@ -41,7 +41,7 @@ if DEBUG:
         format='%(asctime)s %(levelname)s %(message)s',
     )
 
- #X_FRAME_OPTIONS = 'SAMEORIGIN'
+#X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
 ALLOWED_HOSTS = ['codestars2022.herokuapp.com', 'localhost']
