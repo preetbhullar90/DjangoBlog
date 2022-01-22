@@ -15,8 +15,8 @@ import dj_database_url
 
 development = os.environ.get('DEVELOPMENTS', False)
 print("printing development variable",development)
-# if os.path.isfile("env.py"):
-#     import env
+ if os.path.isfile("env.py"):
+     import env
 
 
 
@@ -33,15 +33,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = development
+DEBUG = True
 
 
 #X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-if development:
-    ALLOWED_HOSTS = ['localhost']
-else:
-    ALLOWED_HOSTS = ['codestars2022.herokuapp.com']
+ALLOWED_HOSTS = ['codestars2022.herokuapp.com', 'localhost']
 
 
 
@@ -98,7 +95,7 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR / 'db.sqlite3'),
+            'NAME': BASE_DIR / 'db.sqlite3',
             }}
 #else:
 #    DATABASES = {
