@@ -13,8 +13,7 @@ import os
 from pathlib import Path
 import dj_database_url
 
-development = os.environ.get('DEVELOPMENTS', False)
-print("printing development variable",development)
+
 if os.path.isfile("env.py"):
     import env
 
