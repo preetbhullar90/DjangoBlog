@@ -1,0 +1,11 @@
+{% for blog in blogs %}
+<h1>{{ blog.title|safe }}</h1>
+
+<div class="body">
+    {{ blog.content|safe }}
+</div>
+
+<div class="body-upload">
+    {{ blog.content_upload|safe }}
+</div>
+{% endfor %}
