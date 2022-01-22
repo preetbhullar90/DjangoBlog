@@ -1,8 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-#from ckeditor.fields import RichTextField
-#from ckeditor_uploader.fields import RichTextUploadingField
+
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
@@ -17,8 +16,6 @@ class Post(models.Model):
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
-    #content = RichTextField(blank=True, null=True)
-    #content_upload = RichTextUploadingField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
