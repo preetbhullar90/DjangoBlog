@@ -1,7 +1,7 @@
 from django.contrib import admin
 #from django_summernote.admin import SummernoteModelAdmin
 from .models import Post, Comment
-
+from django.conf import settings
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
