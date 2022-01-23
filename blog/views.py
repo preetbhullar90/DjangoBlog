@@ -26,4 +26,4 @@ class PostDetail(View):
                 "comments": comments,
                 "liked": liked
             },
-            )
+        )
