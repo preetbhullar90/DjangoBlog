@@ -1,10 +1,10 @@
 from django.contrib import admin
 from .models import Post, Comment
-from django_summernote.admin import SummernoteModelAdmin
+#from django_summernote.admin import SummernoteModelAdmin
 # from django.conf import settings
 
 @admin.register(Post)
-class PostAdmin(SummernoteModelAdmin):
+class PostAdmin(admin.ModelAdmin):
 
 
     list_display = ('title', 'slug', 'status', 'created_on')
